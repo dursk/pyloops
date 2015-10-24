@@ -20,10 +20,7 @@ def first_n(iterable, predicate, num):
 
 
 def last(iterable, predicate):
-    try:
-        return [item for item in iterable if predicate(item)][-1]
-    except IndexError:
-        return None
+    return next(reversed(item for item in iterable if predicate(item)), None)
 
 
 def group_into(iterable, **kwargs):
