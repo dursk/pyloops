@@ -2,4 +2,4 @@
 
 ---
 
-a weird child of functools, itertools, and LINQ
+What functools and itertools left behind...
