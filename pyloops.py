@@ -25,6 +25,10 @@ def last(iterable, predicate):
     return next(reversed(item for item in iterable if predicate(item)), None)
 
 
+def concat(iterable):
+    return reduce(lambda x, y: x + y, iterable, [])
+
+
 def flatten(iterable, accessor):
     return reduce(lambda prev, curr: prev + accessor(curr), iterable, [])
 
